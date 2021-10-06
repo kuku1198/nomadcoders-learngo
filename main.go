@@ -5,26 +5,16 @@ import (
 	"strings"
 )
 
-func multiply(a, b int) int {
-	return a * b
-}
+func lenAndUpper(name string) (length int, uppercase string) {
+	defer fmt.Println("I'm done")
 
-func lenAndUpper(name string) (int, string) {
-	return len(name), strings.ToUpper(name)
-}
+	length = len(name)
+	uppercase = strings.ToUpper(name)
 
-func repeatMe(words ...string) {
-	fmt.Println(words)
+	return
 }
 
 func main() {
-	fmt.Println(multiply(2, 2))
-
-	// totalLength, upperName := lenAndUpper("nico")
-	// fmt.Println(totalLength, upperName)
-
-	totalLength, _ := lenAndUpper("nico")
-	fmt.Println(totalLength)
-
-	repeatMe("nico", "lynn", "dal")
+	totalLength, up := lenAndUpper("nico")
+	fmt.Println(totalLength, up)
 }
