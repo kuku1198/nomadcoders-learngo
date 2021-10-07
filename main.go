@@ -3,8 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	names := []string{"nico", "lynn", "dal"}
-	names = append(names, "test")
+	nico := map[string]string{"name":"nico", "age": "12"}
+	for key, value := range nico {
+		fmt.Println(key, value)
+	}
 
-	fmt.Println(names)
+	fmt.Println(nico)
 }
